@@ -6,7 +6,7 @@ export const IndexPage = () => {
     <Container>
       <Main>
         <SmokeBg />
-        <p>lorem500</p>
+        <p>lorem505</p>
       </Main>
     </Container>
   )
