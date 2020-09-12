@@ -21,3 +21,8 @@
     yarn add gatsby-plugin-styled-components styled-components babel-plugin-styled-components
     yarn add
     ```
+
+## Gits
+
+git remote add origin https://...
+git push -f origin master (\*\*Cotinuar pequeños proyectos)
