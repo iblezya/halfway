@@ -10,7 +10,7 @@ const BurgerWrapper = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-  @media ${props => props.theme.breakpoints.tablet} {
+  @media screen and (max-width: 64em) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;

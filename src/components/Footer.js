@@ -10,11 +10,6 @@ export const FooterWrapper = styled.footer`
   justify-content: center;
   align-items: right;
   z-index: 2;
-  @media ${props => props.theme.breakpoints.tablet} {
-    grid-area: footer;
-    display: flex;
-    justify-content: center;
-  }
 `
 export const FooterSocialWrapper = styled.div`
   text-align: center;

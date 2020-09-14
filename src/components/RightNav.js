@@ -27,7 +27,7 @@ const RightNavWrapper = styled.ul`
       transition: 0.5s;
     }
   }
-  @media ${props => props.theme.breakpoints.tablet} {
+  @media screen and (max-width: 64em) {
     z-index: 15;
     padding-left: 0;
     align-items: center;

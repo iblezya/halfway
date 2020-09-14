@@ -19,8 +19,11 @@ export const LogoText = styled.h1`
   padding: 0 50px;
   line-height: 65px;
   font-weight: bold;
-  @media ${props => props.theme.breakpoints.mobile} {
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     padding: 0 25px;
+  }
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    padding: 0 20px;
   }
 `
 export const Nav = () => {
