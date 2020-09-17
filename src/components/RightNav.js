@@ -24,6 +24,7 @@ const RightNavWrapper = styled.ul`
         rgba(3, 117, 199, 0.19) 81%,
         rgba(3, 117, 199, 0) 100%
       );
+
       transition: 0.5s;
     }
   }
@@ -32,7 +33,7 @@ const RightNavWrapper = styled.ul`
     padding-left: 0;
     align-items: center;
     flex-flow: column nowrap;
-    background: linear-gradient(230deg, #01507b 10%, #0753a4 45%, #00bae5 120%);
+    background: linear-gradient(145deg, #3a1c71 25%, #fdbb2d 95%, #fdbb2d 100%);
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;

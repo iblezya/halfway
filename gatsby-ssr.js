@@ -11,7 +11,8 @@ const GlobalStyles = createGlobalStyle`
   }
   body,html{
     font-family: ${props => props.theme.fonts.main};
-    height: 100%;
+    height: auto;
+    scroll-snap-type: y proximity;
     
   }
 `

@@ -47,12 +47,14 @@ export const SmokeBg = ({ className }) => {
 export default SmokeBg
 
 const SmokeWrapper = styled.div`
-  height: 96vh;
+  height: 100vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   background: black;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    justify-content: center;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
   }
@@ -73,22 +75,23 @@ const DivW = styled.div`
   grid-template-areas: "smoke";
   grid-template-columns: auto;
   grid-template-rows: auto;
-  flex-wrap: wrap;
 `
 const Video = styled.video`
-  z-index: 1000;
   grid-area: smoke;
-  width: 100%;
   flex-wrap: wrap;
   margin-top: 0;
+  justify-content: center;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     width: 360px;
+    padding-right: 0;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     width: 400px;
+    padding-right: 0;
   }
   @media screen and (max-height: 425px) {
     height: 300px;
+    padding-right: 0;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     width: 650px;
@@ -112,9 +115,6 @@ const Div = styled.div`
   grid-area: smoke;
   align-items: center;
   justify-content: center;
-
-  @media ${props => props.theme.breakpoints.mobile} {
-  }
   &:before {
     content: "";
     position: absolute;
@@ -176,7 +176,6 @@ const H2main = styled.h2`
 `
 
 const DivImg = styled.div`
-  flex-wrap: wrap;
   height: 690px;
   width: 489px;
   z-index: 0;
@@ -184,17 +183,14 @@ const DivImg = styled.div`
   left: 0;
   bottom: 0;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    flex-direction: column;
     height: 265px;
     width: 187px;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    flex-direction: column;
     height: 310px;
     width: 219px;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    flex-direction: column;
     height: 345px;
     width: 244px;
   }
@@ -203,12 +199,10 @@ const DivImg = styled.div`
     width: 212px;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
-    flex-direction: column;
     height: 510px;
     width: 361px;
   }
   @media ${props => props.theme.breakpoints.desktopLow} {
-    flex-direction: column;
     height: 590px;
     width: 418px;
   }
@@ -219,31 +213,26 @@ const DivImg = styled.div`
 `
 // 590px 832px
 const StyleBGI = styled(BackgroundImage)`
-  flex-wrap: wrap;
   z-index: 0;
-  height: 100%;
-  z-index: 0;
+  height: 690px;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    height: 280px;
+    height: 265px;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     height: 310px;
   }
   /* Fixed */
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    flex-direction: column;
     height: 345px;
   }
   @media screen and (max-height: 425px) {
-    height: 300px;
+    height: 280px;
   }
   /* ----- */
   @media ${props => props.theme.breakpoints.tabletLandscape} {
-    flex-direction: column;
     height: 510px;
   }
   @media ${props => props.theme.breakpoints.desktopLow} {
-    flex-direction: column;
     height: 590px;
   }
   @media ${props => props.theme.breakpoints.desktopMidLow} {

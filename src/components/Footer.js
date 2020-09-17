@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import { P } from "../components"
+import {} from "../components"
 import styled from "styled-components"
 
-export const FooterWrapper = styled.footer`
+const FooterWrapper = styled.footer`
   grid-area: footer;
   line-height: 0.5rem;
   display: flex;
@@ -11,13 +11,13 @@ export const FooterWrapper = styled.footer`
   align-items: right;
   z-index: 2;
 `
-export const FooterSocialWrapper = styled.div`
+const FooterSocialWrapper = styled.div`
   text-align: center;
   display: inline-block;
   align-items: center;
   margin-top: 0.75rem;
 `
-export const FooterSocialIcons = styled.div`
+const FooterSocialIcons = styled.div`
   display: inline-flex;
   margin-bottom: 1rem;
   & img {
@@ -82,11 +82,12 @@ export const Footer = () => {
               <img src={data.instagram.publicURL} alt="Instagram icon" />
             </a>
           </FooterSocialIcons>
-          <P size="xSmall" color="dark3">
-            Created by Gerson Salas © 2020
-          </P>
+          <P>Created by Gerson Salas © 2020</P>
         </FooterSocialWrapper>
       </div>
     </FooterWrapper>
   )
 }
+const P = styled.p`
+  color: ${props => props.theme.colors.dark2};
+`
