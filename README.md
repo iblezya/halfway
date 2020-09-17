@@ -5,9 +5,9 @@
   </a>
 </p>
 <h1 align="center">
-  Proyecto Blog Personal
+  Proyecto Blog Personal 
 </h1>
-
+https://halfwaycode.netlify.app/
 ## 🚀 Plugins
 
     ```shell
@@ -24,5 +24,5 @@
 
 ## Gits
 
-git remote add origin https://...
-git push -f origin master (\*\*Cotinuar pequeños proyectos)
+    git remote add origin https://...
+    git push -f origin master (\*\*Cotinuar pequeños proyectos)
