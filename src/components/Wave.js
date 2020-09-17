@@ -3,6 +3,30 @@ import styled from "styled-components"
 
 const WaveWrapper = styled.div`
   width: 100%;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    background-image: linear-gradient(
+      to top,
+      #c4c5c7 0%,
+      #dcdddf 52%,
+      #ebebeb 100%
+    );
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    background-image: linear-gradient(
+      to top,
+      #c4c5c7 0%,
+      #dcdddf 52%,
+      #ebebeb 100%
+    );
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    background-image: linear-gradient(
+      to top,
+      #c4c5c7 0%,
+      #dcdddf 52%,
+      #ebebeb 100%
+    );
+  }
 `
 const Path = styled.path`
   z-index: 0;

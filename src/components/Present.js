@@ -9,14 +9,14 @@ export const Present = () => {
       blez: file(relativePath: { eq: "blez.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid_noBase64
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
       logo: file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
           fluid(maxWidth: 1500, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
@@ -26,7 +26,7 @@ export const Present = () => {
     <PresentWrapper id="about">
       <Element1>
         <DivImgLogo>
-          <Img fluid={data.logo.childImageSharp.fluid} alt="" />
+          <ImgLogo fluid={data.logo.childImageSharp.fluid} alt="" />
         </DivImgLogo>
       </Element1>
       <Element2>
@@ -51,6 +51,7 @@ export const Present = () => {
 
 const PresentWrapper = styled.div`
   background-color: white;
+
   height: auto;
   display: flex;
   align-items: center;
@@ -68,24 +69,22 @@ const PresentWrapper = styled.div`
 `
 
 const Element1 = styled.div`
-  align-self: auto;
+  justify-content: flex-end;
+  display: flex;
+  align-content: center;
+  position: relative;
   height: auto;
   width: 900px;
   background: none;
-  padding: 100px;
-  position: relative;
   animation-name: example1;
-  animation-duration: 8s;
+  animation-duration: 3s;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    padding: 0;
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    padding: 0;
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    padding: 0;
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
@@ -101,7 +100,7 @@ const Element1 = styled.div`
   }
   @keyframes example1 {
     0% {
-      right: 3000px;
+      right: 1500px;
       top: 0px;
     }
     100% {
@@ -111,9 +110,22 @@ const Element1 = styled.div`
   }
 `
 const Element2 = styled(Element1)`
-  animation-duration: 6s;
-  background: none;
+  animation-duration: 3.5s;
+  padding-left: 2em;
+
   animation-name: example2;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    padding: 4em 1em;
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    padding: 5em 1.25em;
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    padding: 6em 1.5em;
+    background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  }
   @keyframes example2 {
     0% {
       left: 1000px;
@@ -126,9 +138,21 @@ const Element2 = styled(Element1)`
   }
 `
 const Element3 = styled(Element1)`
-  animation-duration: 11.5s;
+  animation-duration: 4s;
   background: none;
   animation-name: example3;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    padding: 4em 1.5em;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    padding: 4.5em 2.5em;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    padding: 5em 3em;
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+  }
   @keyframes example3 {
     0% {
       right: 1000px;
@@ -141,13 +165,24 @@ const Element3 = styled(Element1)`
   }
 `
 const Element4 = styled(Element1)`
-  animation-duration: 14s;
+  justify-content: center;
+  animation-duration: 4s;
   align-content: center;
   background: none;
   animation-name: example4;
+  padding: 2em 0;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    background: black;
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    background: black;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    background: black;
+  }
   @keyframes example4 {
     0% {
-      left: 3000px;
+      left: 680px;
       top: 0px;
     }
     100% {
@@ -161,12 +196,24 @@ const H2 = styled.h2`
   text-align: left;
 `
 const P = styled.p`
-  color: ${props => props.theme.colors.dark2};
-  padding-top: 10px;
+  color: ${props => props.theme.colors.main1};
   font-size: 1.5em;
+  line-height: 1.25em;
+  padding-left: 20%;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    font-size: 1.25em;
+    line-height: 1.45em;
+    padding-left: 0;
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    padding-left: 0;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    padding-left: 0;
+  }
 `
 const DivImgBlez = styled.div`
-  width: 750px;
+  width: 700px;
   border-radius: 50%;
   -webkit-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
   -moz-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
@@ -178,16 +225,10 @@ const DivImgBlez = styled.div`
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    width: 768px;
+    width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
-    width: 450px;
-  }
-  @media ${props => props.theme.breakpoints.desktopLow} {
-    width: 600px;
-  }
-  @media ${props => props.theme.breakpoints.desktopMidLow} {
-    width: 700px;
+    width: 400px;
   }
 `
 const ImgBlez = styled(Img)`
@@ -195,7 +236,7 @@ const ImgBlez = styled(Img)`
   clip-path: circle();
 `
 const DivImgLogo = styled.div`
-  width: 800px;
+  width: 700px;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     width: 100%;
   }
@@ -203,10 +244,10 @@ const DivImgLogo = styled.div`
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    width: 768px;
+    width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
-    width: 450px;
+    width: 500px;
   }
   @media ${props => props.theme.breakpoints.desktopLow} {
     width: 600px;
@@ -214,6 +255,10 @@ const DivImgLogo = styled.div`
   @media ${props => props.theme.breakpoints.desktopMidLow} {
     width: 700px;
   }
+`
+
+const ImgLogo = styled(Img)`
+  width: 100%;
 `
 
 // const DivSvg = styled.div`

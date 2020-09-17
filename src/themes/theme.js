@@ -4,10 +4,10 @@ export default {
     code: "Roboto Mono, monospace",
   },
   colors: {
-    main1: "hsl(207,70%,59%)",
+    main1: "#aaa",
     main2: "hsl(207,70%,94%)",
     dark1: "#01507b",
-    dark2: "#aaa",
+    dark2: "white",
     dark3: "hsl(227,2%,64%)",
     light1: "#ddedfd",
     light2: "white",

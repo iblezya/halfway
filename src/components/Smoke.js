@@ -10,7 +10,7 @@ export const SmokeBg = ({ className }) => {
       indexImage: file(relativePath: { eq: "black.png" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

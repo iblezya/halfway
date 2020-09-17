@@ -89,5 +89,5 @@ export const Footer = () => {
   )
 }
 const P = styled.p`
-  color: ${props => props.theme.colors.dark2};
+  color: ${props => props.theme.colors.dark3};
 `
