@@ -8,7 +8,7 @@ const RightNavWrapper = styled.ul`
   & li {
     display: inline-block;
     line-height: 65px;
-    margin: 0 5px;
+    margin: 0 1em;
     a {
       color: #ddedfd;
       font-size: 17px;
@@ -57,13 +57,7 @@ export const RightNav = ({ open }) => {
         <Link to="/">Inicio</Link>
       </li>
       <li>
-        <Link to="#pr">Productos</Link>
-      </li>
-      <li>
-        <Link to="#">Nosotros</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contacto</Link>
+        <Link to="#about">About</Link>
       </li>
     </RightNavWrapper>
   )

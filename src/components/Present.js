@@ -6,75 +6,102 @@ import Img from "gatsby-image"
 export const Present = () => {
   const data = useStaticQuery(graphql`
     query {
-      Blez: file(relativePath: { eq: "blez.jpeg" }) {
+      blez: file(relativePath: { eq: "blez.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 100) {
             ...GatsbyImageSharpFluid_noBase64
           }
         }
       }
+      logo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1500, quality: 100) {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
     }
   `)
   return (
-    <PresentWrapper>
+    <PresentWrapper id="about">
       <Element1>
-        <H2>Hello. I’m. Gerson Jean Pierre. I am from Lima, Perú.</H2>
-        <P>
-          And todoy starting the long road of the fullstack javascript
-          developer.
-        </P>
+        <DivImgLogo>
+          <Img fluid={data.logo.childImageSharp.fluid} alt="" />
+        </DivImgLogo>
       </Element1>
       <Element2>
-        <DivSvg>
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <path
-              fill="#F1C21B"
-              d="M39.9,-48.9C53.2,-36.4,66.4,-25.2,68.9,-12C71.3,1.2,63,16.4,54.3,31.2C45.6,46.1,36.5,60.7,22.4,69.2C8.3,77.6,-10.9,80,-23.4,72.1C-36,64.2,-42,46,-44.9,30.9C-47.7,15.7,-47.3,3.7,-45.8,-8.6C-44.3,-21,-41.7,-33.8,-33.9,-47.2C-26,-60.6,-13,-74.7,0.1,-74.9C13.3,-75.1,26.6,-61.3,39.9,-48.9Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-        </DivSvg>
-        <DivImgBlez>
-          <ImgBlez fluid={data.Blez.childImageSharp.fluid} alt="" />
-        </DivImgBlez>
+        <H2>Hello. I’m. Gerson Jean Pierre. I am from Lima, Perú.</H2>
       </Element2>
+      <Element3>
+        <P>
+          Comenzando esta travesía como desarrollador, voy empezando con
+          GatsbyJS y conocimientos en HTML5, CSS y un poco de Javascript. La
+          meta del 2020 es aprender con buenas prácticas las siguientes
+          tecnologías: JS, git/github,Py, Java y BD.
+        </P>
+      </Element3>
+      <Element4>
+        <DivImgBlez>
+          <ImgBlez fluid={data.blez.childImageSharp.fluid} alt="" />
+        </DivImgBlez>
+      </Element4>
     </PresentWrapper>
   )
 }
 
 const PresentWrapper = styled.div`
-  scroll-snap-align: start;
   background-color: white;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     flex-direction: column;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    flex-direction: column;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
     flex-direction: column;
   }
 `
 
 const Element1 = styled.div`
-  height: 500px;
-  width: 50%;
-  background: #ddd;
+  align-self: auto;
+  height: auto;
+  width: 900px;
+  background: none;
   padding: 100px;
   position: relative;
   animation-name: example1;
-  animation-duration: 2s;
+  animation-duration: 8s;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    padding: 50px 10px;
+    padding: 0;
+    width: 100%;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    padding: 50px 25px;
+    padding: 0;
     width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    padding: 0;
+    width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.tabletLandscape} {
+    width: 500px;
+  }
+  @media ${props => props.theme.breakpoints.desktopLow} {
+    width: 660px;
+  }
+  @media ${props => props.theme.breakpoints.desktopMidLow} {
+    width: 790px;
+  }
+  @media ${props => props.theme.breakpoints.desktopMid} {
   }
   @keyframes example1 {
     0% {
-      right: 200px;
+      right: 3000px;
       top: 0px;
     }
     100% {
@@ -84,11 +111,43 @@ const Element1 = styled.div`
   }
 `
 const Element2 = styled(Element1)`
-  background: salmon;
+  animation-duration: 6s;
+  background: none;
   animation-name: example2;
   @keyframes example2 {
     0% {
-      left: 200px;
+      left: 1000px;
+      top: 0px;
+    }
+    100% {
+      left: 0px;
+      top: 0px;
+    }
+  }
+`
+const Element3 = styled(Element1)`
+  animation-duration: 11.5s;
+  background: none;
+  animation-name: example3;
+  @keyframes example3 {
+    0% {
+      right: 1000px;
+      top: 0px;
+    }
+    100% {
+      right: 0px;
+      top: 0px;
+    }
+  }
+`
+const Element4 = styled(Element1)`
+  animation-duration: 14s;
+  align-content: center;
+  background: none;
+  animation-name: example4;
+  @keyframes example4 {
+    0% {
+      left: 3000px;
       top: 0px;
     }
     100% {
@@ -107,21 +166,61 @@ const P = styled.p`
   font-size: 1.5em;
 `
 const DivImgBlez = styled.div`
-  position: absolute;
-  left: 4em;
-  top: 4em;
-  height: 350px;
-  width: 350px;
+  width: 750px;
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
+  -moz-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
+  box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    width: 768px;
+  }
+  @media ${props => props.theme.breakpoints.tabletLandscape} {
+    width: 450px;
+  }
+  @media ${props => props.theme.breakpoints.desktopLow} {
+    width: 600px;
+  }
+  @media ${props => props.theme.breakpoints.desktopMidLow} {
+    width: 700px;
+  }
+`
+const ImgBlez = styled(Img)`
+  width: 100%;
+  clip-path: circle();
+`
+const DivImgLogo = styled.div`
+  width: 800px;
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    width: 100%;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    width: 768px;
+  }
+  @media ${props => props.theme.breakpoints.tabletLandscape} {
+    width: 450px;
+  }
+  @media ${props => props.theme.breakpoints.desktopLow} {
+    width: 600px;
+  }
+  @media ${props => props.theme.breakpoints.desktopMidLow} {
+    width: 700px;
+  }
 `
 
-const ImgBlez = styled(Img)`
-  clip-path: ellipse();
-`
-const DivSvg = styled.div`
-  z-index: 12;
-  position: absolute;
-  left: 2em;
-  top: 2em;
-  height: 300px;
-  width: 300px;
-`
+// const DivSvg = styled.div`
+//   z-index: 12;
+//   position: absolute;
+//   left: 2em;
+//   top: 2em;
+//   height: 300px;
+//   width: 300px;
+// `
