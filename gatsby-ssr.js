@@ -12,7 +12,7 @@ const GlobalStyles = createGlobalStyle`
   body,html{
     font-family: ${props => props.theme.fonts.main};
     height: auto;
-    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y proximity; */
     
   }
 `

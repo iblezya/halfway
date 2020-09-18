@@ -50,8 +50,7 @@ export const Present = () => {
 }
 
 const PresentWrapper = styled.div`
-  background-color: white;
-
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   height: auto;
   display: flex;
   align-items: center;
@@ -69,13 +68,12 @@ const PresentWrapper = styled.div`
 `
 
 const Element1 = styled.div`
-  justify-content: flex-end;
   display: flex;
+  justify-content: flex-end;
   align-content: center;
   position: relative;
-  height: auto;
-  width: 900px;
-  background: none;
+  width: 50%;
+
   animation-name: example1;
   animation-duration: 3s;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
@@ -89,6 +87,8 @@ const Element1 = styled.div`
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     width: 100%;
     animation-duration: 1.5s;
+    justify-content: center;
+    background: black;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
     width: 500px;
@@ -228,19 +228,18 @@ const P = styled.p`
   }
 `
 const DivImgBlez = styled.div`
-  width: 700px;
+  width: 400px;
   border-radius: 50%;
   -webkit-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
   -moz-box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
   box-shadow: 10px 10px 35px -4px rgba(38, 43, 51, 1);
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    width: 100%;
+    width: 300px;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    width: 100%;
+    width: 350px;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
     width: 400px;
@@ -251,7 +250,7 @@ const ImgBlez = styled(Img)`
   clip-path: circle();
 `
 const DivImgLogo = styled.div`
-  width: 700px;
+  width: 550px;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     width: 100%;
   }
@@ -259,10 +258,10 @@ const DivImgLogo = styled.div`
     width: 100%;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    width: 100%;
+    width: 600px;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
-    width: 500px;
+    width: 450px;
   }
   @media ${props => props.theme.breakpoints.desktopLow} {
     width: 600px;

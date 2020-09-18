@@ -4,6 +4,7 @@ import {} from "../components"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
+  background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
   grid-area: footer;
   line-height: 0.5rem;
   display: flex;
