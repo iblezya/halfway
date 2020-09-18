@@ -80,12 +80,15 @@ const Element1 = styled.div`
   animation-duration: 3s;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     width: 100%;
+    animation-duration: 1.5s;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     width: 100%;
+    animation-duration: 1.5s;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     width: 100%;
+    animation-duration: 1.5s;
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
     width: 500px;
@@ -117,14 +120,17 @@ const Element2 = styled(Element1)`
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     padding: 4em 1em;
     background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     padding: 5em 1.25em;
     background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     padding: 6em 1.5em;
     background: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+    animation-duration: 2s;
   }
   @keyframes example2 {
     0% {
@@ -142,16 +148,19 @@ const Element3 = styled(Element1)`
   background: none;
   animation-name: example3;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    padding: 4em 1.5em;
+    padding: 4em 1.25em;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    padding: 4.5em 2.5em;
+    padding: 4.5em 2.25em;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     padding: 5em 3em;
     background-image: linear-gradient(to right, #434343 0%, black 100%);
+    animation-duration: 2s;
   }
   @keyframes example3 {
     0% {
@@ -172,13 +181,16 @@ const Element4 = styled(Element1)`
   animation-name: example4;
   padding: 2em 0;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
-    background: black;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
-    background: black;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
-    background: black;
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    animation-duration: 2s;
   }
   @keyframes example4 {
     0% {
@@ -202,14 +214,17 @@ const P = styled.p`
   padding-left: 20%;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     font-size: 1.25em;
-    line-height: 1.45em;
+    line-height: 1.35em;
     padding-left: 0;
+    color: #f3f3eb;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     padding-left: 0;
+    color: #f3f3eb;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     padding-left: 0;
+    color: #f3f3eb;
   }
 `
 const DivImgBlez = styled.div`

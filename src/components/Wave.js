@@ -6,25 +6,25 @@ const WaveWrapper = styled.div`
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     background-image: linear-gradient(
       to top,
-      #c4c5c7 0%,
-      #dcdddf 52%,
-      #ebebeb 100%
+      #dad4ec 0%,
+      #dad4ec 1%,
+      #f3e7e9 100%
     );
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     background-image: linear-gradient(
       to top,
-      #c4c5c7 0%,
-      #dcdddf 52%,
-      #ebebeb 100%
+      #dad4ec 0%,
+      #dad4ec 1%,
+      #f3e7e9 100%
     );
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     background-image: linear-gradient(
       to top,
-      #c4c5c7 0%,
-      #dcdddf 52%,
-      #ebebeb 100%
+      #dad4ec 0%,
+      #dad4ec 1%,
+      #f3e7e9 100%
     );
   }
 `
