@@ -4,7 +4,7 @@ export default {
     code: "Roboto Mono, monospace",
   },
   colors: {
-    main1: "#aaa",
+    main1: "#414042",
     main2: "hsl(207,70%,94%)",
     dark1: "#01507b",
     dark2: "white",

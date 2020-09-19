@@ -3,7 +3,12 @@ import styled from "styled-components"
 
 const WaveWrapper = styled.div`
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 280px;
+
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    height: 90px;
     background-image: linear-gradient(
       to top,
       #dad4ec 0%,
@@ -12,6 +17,7 @@ const WaveWrapper = styled.div`
     );
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    height: 125px;
     background-image: linear-gradient(
       to top,
       #dad4ec 0%,
@@ -20,12 +26,16 @@ const WaveWrapper = styled.div`
     );
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
+    height: 175px;
     background-image: linear-gradient(
       to top,
       #dad4ec 0%,
       #dad4ec 1%,
       #f3e7e9 100%
     );
+  }
+  @media ${props => props.theme.breakpoints.tabletLandscape} {
+    height: 225px;
   }
 `
 const Path = styled.path`

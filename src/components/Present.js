@@ -35,9 +35,20 @@ export const Present = () => {
       <Element3>
         <P>
           Comenzando esta travesía como desarrollador, voy empezando con
-          GatsbyJS y conocimientos en HTML5, CSS y un poco de Javascript. La
-          meta del 2020 es aprender con buenas prácticas las siguientes
-          tecnologías: JS, git/github,Py, Java y BD.
+          GatsbyJS y conocimientos en HTML5, CSS (Styled components) y un poco
+          de Javascript. La meta del 2020 es aprender con buenas prácticas las
+          siguientes tecnologías: JS, git/github, Python, Java y BD.
+          <br />
+          <br />
+          Este <strong>Sitio Web </strong> está realizado con la tecnología{" "}
+          <A href="https://jamstack.org/" target="_blank">
+            Jamstack
+          </A>
+          (
+          <A href="https://www.gatsbyjs.com/" target="_blank">
+            GatsbyJS
+          </A>
+          ).
         </P>
       </Element3>
       <Element4>
@@ -73,22 +84,25 @@ const Element1 = styled.div`
   align-content: center;
   position: relative;
   width: 50%;
-
+  z-index: 6;
   animation-name: example1;
   animation-duration: 3s;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     width: 100%;
     animation-duration: 1.5s;
+    box-shadow: 0px 4px 8px 1.5px rgba(0, 0, 0, 0.97);
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
     width: 100%;
     animation-duration: 1.5s;
+    box-shadow: 0px 4px 8px 1.5px rgba(0, 0, 0, 0.97);
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
     width: 100%;
     animation-duration: 1.5s;
     justify-content: center;
     background: black;
+    box-shadow: 0px 4px 8px 1.5px rgba(0, 0, 0, 0.97);
   }
   @media ${props => props.theme.breakpoints.tabletLandscape} {
     width: 500px;
@@ -115,7 +129,7 @@ const Element1 = styled.div`
 const Element2 = styled(Element1)`
   animation-duration: 3.5s;
   padding-left: 2em;
-
+  z-index: 5;
   animation-name: example2;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     padding: 4em 1em;
@@ -144,8 +158,10 @@ const Element2 = styled(Element1)`
   }
 `
 const Element3 = styled(Element1)`
+  z-index: 4;
   animation-duration: 4s;
   background: none;
+  padding-right: 2em;
   animation-name: example3;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
     padding: 4em 1.25em;
@@ -174,21 +190,25 @@ const Element3 = styled(Element1)`
   }
 `
 const Element4 = styled(Element1)`
-  justify-content: center;
+  z-index: 3;
+  justify-content: start;
   animation-duration: 4s;
   align-content: center;
   background: none;
   animation-name: example4;
   padding: 2em 0;
   @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    justify-content: center;
     background: linear-gradient(to top, #dfe9f3 0%, white 100%);
     animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    justify-content: center;
     background: linear-gradient(to top, #dfe9f3 0%, white 100%);
     animation-duration: 2s;
   }
   @media ${props => props.theme.breakpoints.tabletPortrait} {
+    justify-content: center;
     background: linear-gradient(to top, #dfe9f3 0%, white 100%);
     animation-duration: 2s;
   }
@@ -206,6 +226,20 @@ const Element4 = styled(Element1)`
 const H2 = styled.h2`
   font-size: 3em;
   text-align: left;
+`
+const A = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.colors.main1};
+  @media ${props => props.theme.breakpoints.smartphonePortrait} {
+    color: white;
+  }
+  @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+    color: white;
+  }
+  @media ${props => props.theme.breakpoints.tabletPortrait} {
+    padding-left: 0;
+    color: white;
+  }
 `
 const P = styled.p`
   color: ${props => props.theme.colors.main1};

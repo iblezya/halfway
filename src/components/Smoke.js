@@ -121,7 +121,7 @@ const Div = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background: linear-gradient(
       90deg,
       rgba(31, 255, 0, 1) 0%,
