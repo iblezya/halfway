@@ -11,6 +11,9 @@ export const RightNav = ({ open }) => {
       <li>
         <Link to="#about">About</Link>
       </li>
+      <li>
+        <Link to="/codenotes">CodeNotes</Link>
+      </li>
     </RightNavWrapper>
   )
 }

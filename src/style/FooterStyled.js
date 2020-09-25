@@ -1,14 +1,40 @@
 import styled from "styled-components"
-
+//Index
 export const FooterWrapper = styled.footer`
+  grid-column: 1/15;
+  grid-row: 3/4;
   background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
-  grid-area: footer;
   line-height: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: right;
   z-index: 2;
+  @media ${props => props.theme.breakpoints.tablet} {
+    grid-column: 1/9;
+  }
+  @media ${props => props.theme.breakpoints.mobile} {
+    grid-column: 1/9;
+  }
 `
+//Codenotes
+export const FooterCNWrapper = styled.footer`
+  grid-column: 1/15;
+  grid-row: 5/6;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+  line-height: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  z-index: 2;
+  @media ${props => props.theme.breakpoints.tablet} {
+    grid-column: 1/9;
+  }
+  @media ${props => props.theme.breakpoints.mobile} {
+    grid-column: 1/9;
+  }
+`
+// ****
 export const FooterSocialWrapper = styled.div`
   text-align: center;
   display: inline-block;

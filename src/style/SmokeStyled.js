@@ -3,7 +3,7 @@ import BackgroundImage from "gatsby-background-image"
 import { keyframes } from "styled-components"
 
 export const SmokeWrapper = styled.div`
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ export const Div = styled.div`
   &:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 65px;
     left: 0;
     width: 100%;
     height: 90%;

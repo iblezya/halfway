@@ -11,6 +11,7 @@ export default {
     dark3: "hsl(227,2%,64%)",
     light1: "#ddedfd",
     light2: "white",
+    codenotes: "#fffcf2",
   },
 
   spacings: {
@@ -47,5 +48,7 @@ export default {
       "only screen and (min-width:100em) and (max-width: 119.9375em) ", //Laptop and desktop Mid Low (1600px 1919px)
     desktopMid:
       "only screen and (min-width:120em) and (max-width: 159.9375em) ", //Laptop and desktop Mid (1920px 2559px)
+    mobile: "only screen and (max-width: 50rem)",
+    tablet: "only screen and (max-width: 65rem)",
   },
 }

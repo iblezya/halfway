@@ -1,5 +1,9 @@
 module.exports = {
   siteMetadata: {
+    title: "iBlezYa",
+    author: "Gerson Jean Pierre",
+  },
+  siteMetadata: {
     title: "Halfway",
     author: "Gerson Jean Pierre",
   },
