@@ -14,7 +14,7 @@ export const CodeNotesWrapper = styled.div`
   align-content: center;
   flex-direction: column;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-  opacity: 0.94;
+  opacity: 0.88;
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
@@ -135,17 +135,56 @@ export const Ul = styled.ul`
 export const Li = styled.li`
   margin: 1rem;
   text-align: center;
-  color: black;
-`
-export const Li2 = styled.li`
-  margin: 1rem;
-  text-align: center;
   & a {
-    color: yellow;
-    text-shadow: 3px 3px 2px #474747;
   }
 
   a:hover {
+    color: black;
+    text-shadow: 3px 3px 2px #474747;
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  }
+`
+export const Li2 = styled(Li)`
+  & a {
+    color: yellow;
+  }
+  a:hover {
     background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+  }
+`
+export const Li3 = styled(Li)`
+  & a {
+  }
+  a:hover {
+    background-image: linear-gradient(
+      to right,
+      #b8cbb8 0%,
+      #b8cbb8 0%,
+      #b465da 0%,
+      #cf6cc9 33%,
+      #ee609c 66%,
+      #ee609c 100%
+    );
+  }
+`
+export const Li4 = styled(Li)`
+  & a {
+  }
+  a:hover {
+    color: #bee9e8;
+    background-image: linear-gradient(
+      60deg,
+      #3d3393 0%,
+      #2b76b9 37%,
+      #2cacd1 65%,
+      #35eb93 100%
+    );
+  }
+`
+export const Li5 = styled(Li)`
+  & a {
+  }
+  a:hover {
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
   }
 `

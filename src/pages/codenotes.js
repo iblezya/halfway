@@ -11,6 +11,9 @@ import {
   H3CN,
   PCN,
   Li2,
+  Li3,
+  Li4,
+  Li5,
 } from "../style"
 
 const CodeNotes = () => {
@@ -24,18 +27,18 @@ const CodeNotes = () => {
         <Cursos>
           <H3CN>Code Notes</H3CN>
           <Ul>
-            <Li>
-              <Link to="#">Fundametor$$$</Link>
-            </Li>
+            <Li5>
+              <Link to="/codenotes/fundamentos">Fundamentor$$$</Link>
+            </Li5>
             <Li2>
               <Link to="#">Javascript</Link>
             </Li2>
-            <Li>
+            <Li3>
               <Link to="#">Desarrollo Web</Link>
-            </Li>
-            <Li>
+            </Li3>
+            <Li4>
               <Link to="#">Git/Github</Link>
-            </Li>
+            </Li4>
             <Li>
               <Link to="#">Ingles</Link>
             </Li>
