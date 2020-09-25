@@ -15,11 +15,10 @@ export const CodeNotesWrapper = styled.div`
   flex-direction: column;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   opacity: 0.94;
-  z-index: 1;
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
-  z-index: 10;
+  z-index: 2;
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2/8;
     padding: ${props =>
@@ -32,9 +31,11 @@ export const CodeNotesWrapper = styled.div`
 export const DivText = styled.div`
   padding: 0.75em 0;
   text-align: center;
+  z-index: 1;
 `
 export const Cursos = styled(DivText)`
   padding: 0.75em 0;
+  z-index: 1;
 `
 export const H2CN = styled.h2`
   background: linear-gradient(

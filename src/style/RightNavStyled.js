@@ -26,7 +26,7 @@ export const RightNavWrapper = styled.ul`
       transition: 0.5s;
     }
   }
-  @media screen and (max-width: 64em) {
+  @media screen and (max-width: 65em) {
     z-index: 15;
     padding-left: 0;
     align-items: center;

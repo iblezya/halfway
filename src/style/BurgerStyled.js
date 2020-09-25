@@ -8,7 +8,7 @@ export const BurgerWrapper = styled.div`
   right: 20px;
   z-index: 20;
   display: none;
-  @media screen and (max-width: 64em) {
+  @media screen and (max-width: 65em) {
     display: flex;
     justify-content: space-around;
     flex-flow: column nowrap;

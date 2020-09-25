@@ -8,6 +8,7 @@ export const FeatureImageWrapper = styled.div`
   overflow: hidden;
   position: relative;
   justify-content: center;
+  z-index: 1;
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 1/9;
   }
