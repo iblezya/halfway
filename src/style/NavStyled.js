@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const NavWrapper = styled.nav`
   grid-column: 1/15;
-  grid-row: 1/2;
+  grid-row: 1/6;
   background: black;
   height: 65px;
   * {
@@ -11,12 +11,6 @@ export const NavWrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   z-index: 3;
-  @media ${props => props.theme.breakpoints.tablet} {
-    grid-column: 1/9;
-  }
-  @media ${props => props.theme.breakpoints.mobile} {
-    grid-column: 1/9;
-  }
 `
 export const LogoText = styled.h1`
   font-family: ${props => props.theme.fonts.mainL};

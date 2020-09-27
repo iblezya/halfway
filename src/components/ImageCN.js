@@ -2,7 +2,7 @@ import React from "react"
 import { FeatureImageWrapper, ImgCN } from "../style"
 import { useStaticQuery, graphql } from "gatsby"
 
-export const ImageCN = () => {
+export const ImageCN = ({ fluid }) => {
   const data = useStaticQuery(graphql`
     query {
       codenotesImage: file(relativePath: { eq: "notes.jpg" }) {
@@ -16,7 +16,10 @@ export const ImageCN = () => {
   `)
   return (
     <FeatureImageWrapper>
-      <ImgCN fluid={data.codenotesImage.childImageSharp.fluid} alt="" />
+      <ImgCN
+        fluid={fluid ? fluid : data.codenotesImage.childImageSharp.fluid}
+        alt=""
+      />
     </FeatureImageWrapper>
   )
 }

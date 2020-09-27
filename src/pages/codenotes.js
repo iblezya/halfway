@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ContainerCode } from "../components"
+import { ContainerCode, ImageCN } from "../components"
 import {
   CodeNotesWrapper,
   DivText,
@@ -19,6 +19,7 @@ import {
 const CodeNotes = () => {
   return (
     <ContainerCode>
+      <ImageCN />
       <CodeNotesWrapper>
         <DivText>
           <H2CN>We Got The Power</H2CN>

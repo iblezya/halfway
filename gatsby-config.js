@@ -8,42 +8,42 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "funda",
-        path: `${__dirname}/src/content/fundamentos`,
+        path: `${__dirname}/content/fundamentos`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "javascript",
-        path: `${__dirname}/src/content/javascript`,
+        path: `${__dirname}/content/javascript`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "web",
-        path: `${__dirname}/src/content/web`,
+        path: `${__dirname}/content/web`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "git",
-        path: `${__dirname}/src/content/gitgithub`,
+        path: `${__dirname}/content/gitgithub`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "ingles",
-        path: `${__dirname}/src/content/ingles`,
+        path: `${__dirname}/content/ingles`,
       },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "desarrollo",
-        path: `${__dirname}/src/content/desarrollo`,
+        path: `${__dirname}/content/desarrollo`,
       },
     },
     {

@@ -1,17 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
-import { ContainerCode } from "../../components"
+import { ContainerCode, ImageCN } from "../../components"
 import { CodeNotesWrapper, Cursos, Ul, Li5, H2CN } from "../../style"
 
 export const FundamentosPage = () => {
   return (
     <ContainerCode>
+      <ImageCN />
       <CodeNotesWrapper>
         <H2CN>Básico</H2CN>
         <Cursos>
           <Ul>
             <Li5>
-              <Link to="#">Pensamiento Lógico</Link>
+              <Link to="/codenotes/fundamentos/pensamientologico">
+                Pensamiento Lógico
+              </Link>
             </Li5>
             <Li5>
               <Link to="#">Programación Básica</Link>
