@@ -17,7 +17,6 @@ const EstrategiasPage = () => {
               title
               slug
               date
-              modulo
             }
           }
         }
@@ -34,7 +33,7 @@ const EstrategiasPage = () => {
             return (
               <Li4>
                 <Link
-                  to={`/codenotes/ingles/estrategia/${edge.node.frontmatter.slug}`}
+                  to={`/codenotes/ingles/estrategias/${edge.node.frontmatter.slug}`}
                 >
                   <h3>{edge.node.frontmatter.title}</h3>
                   <p>{edge.node.frontmatter.date}</p>
