@@ -17,15 +17,19 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const fundaTemplate = require.resolve("./src/templates/fundamentos.js")
   const javascriptTemplate = require.resolve("./src/templates/javascript.js")
+  const inglesTemplate = require.resolve("./src/templates/ingles.js")
+  const senatiTemplate = require.resolve(`./src/templates/senati.js`)
   const { data } = await graphql(`
     query {
-      allMdx {
+      allMdx(filter: { frontmatter: { post: { regex: "/post/" } } }) {
         edges {
           node {
             frontmatter {
               slug
               date
               title
+              modulo
+              post
             }
             fields {
               sourceName
@@ -45,11 +49,18 @@ exports.createPages = async ({ graphql, actions }) => {
         path: `/codenotes/fundamentos/pensamientologico/${edge.node.frontmatter.slug}`,
         context: { id },
       })
-    } else if (edge.node.fields.collection === "javascript")
+    } else if (edge.node.fields.sourceName === "ingles") {
       createPage({
-        component: javascriptTemplate,
-        path: `/codenotes/javascript/javascript/${edge.node.frontmatter.slug}`,
+        component: inglesTemplate,
+        path: `/codenotes/ingles/${edge.node.frontmatter.modulo}/${edge.node.frontmatter.slug}`,
         context: { id },
       })
+    } else if (edge.node.fields.sourceName === "senati") {
+      createPage({
+        component: senatiTemplate,
+        path: `/codenotes/senati/${edge.node.frontmatter.modulo}/${edge.node.frontmatter.slug}`,
+        context: { id },
+      })
+    }
   })
 }

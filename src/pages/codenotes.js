@@ -41,7 +41,7 @@ const CodeNotes = () => {
               <Link to="#">Git/Github</Link>
             </Li4>
             <Li>
-              <Link to="#">Ingles</Link>
+              <Link to="/codenotes/ingles">Ingles</Link>
             </Li>
             <Li>
               <Link to="#">Desarrollo Profesional</Link>

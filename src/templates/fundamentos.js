@@ -17,7 +17,7 @@ const FundamentosPost = ({ data }) => {
   )
 }
 export const pageQuery = graphql`
-  query SinglePostQuery($id: String!) {
+  query FunSinglePostQuery($id: String!) {
     mdx(id: { eq: $id }) {
       body
       frontmatter {
@@ -37,23 +37,3 @@ export const pageQuery = graphql`
   }
 `
 export default FundamentosPost
-
-// export const fundaQuery = graphql`
-//   query FundaPostQuery($id: String!) {
-//     mdx(id: { eq: $id }) {
-//       body
-//       frontmatter {
-//         date
-//         slug
-//         title
-//         featureImage {
-//           childImageSharp {
-//             fluid(maxWidth: 1920, quality: 100) {
-//               srcWebp
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
