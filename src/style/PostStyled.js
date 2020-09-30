@@ -4,7 +4,7 @@ export const PostWrapper = styled.div`
   grid-column: 3 / span 10;
   grid-row: 3 / 5;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-  opacity: 0.88;
+  opacity: 0.95;
   box-shadow: ${props => props.theme.shadows.shadow1};
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
@@ -35,5 +35,9 @@ export const PostWrapper = styled.div`
   }
   h1 {
     font-size: 2.25em;
+  }
+  img {
+    opacity: 1;
+    z-index: 11;
   }
 `
