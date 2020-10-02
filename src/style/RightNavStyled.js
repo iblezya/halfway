@@ -27,7 +27,7 @@ export const RightNavWrapper = styled.ul`
     }
   }
   @media screen and (max-width: 65em) {
-    z-index: 15;
+    z-index: 19;
     padding-left: 0;
     align-items: center;
     flex-flow: column nowrap;

@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const PostWrapper = styled.div`
+  z-index: 9;
   grid-column: 3 / span 10;
   grid-row: 3 / 5;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
@@ -9,10 +10,11 @@ export const PostWrapper = styled.div`
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
-  z-index: 10;
 
   @media ${props => props.theme.breakpoints.tablet} {
     grid-column: 2 / 8;
+    padding: ${props =>
+      `${props.theme.spacings.medium} ${props.theme.spacings.large}`};
   }
   @media ${props => props.theme.breakpoints.mobile} {
     padding: ${props =>
@@ -38,6 +40,17 @@ export const PostWrapper = styled.div`
   }
   img {
     opacity: 1;
-    z-index: 11;
+    width: 700px;
+    min-width: 3;
+    @media ${props => props.theme.breakpoints.smartphonePortrait} {
+      width: 350px;
+    }
+    @media ${props => props.theme.breakpoints.smartphoneLandscape} {
+      width: 420px;
+    }
+
+    @media ${props => props.theme.breakpoints.tabletPortrait} {
+      width: 620px;
+    }
   }
 `

@@ -10,7 +10,7 @@ export const NavWrapper = styled.nav`
   }
   display: flex;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 19;
 `
 export const LogoText = styled.h1`
   font-family: ${props => props.theme.fonts.mainL};
