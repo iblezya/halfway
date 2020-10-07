@@ -1,14 +1,13 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
+import { ContainerCode, ImageCN } from "../../components"
+import { CodeNotesWrapper, Ul, Li4, H2CN } from "../../style"
 
-import { ContainerCode, ImageCN } from "../../../components"
-import { CodeNotesWrapper, Cursos, Ul, Li4, H2CN } from "../../../style"
-
-const AlgoritmiaPage = () => {
-  const data2 = useStaticQuery(graphql`
+const PythonPage = () => {
+  const dataPython = useStaticQuery(graphql`
     query {
       allMdx(
-        filter: { frontmatter: { modulo: { regex: "/algoritmia/" } } }
+        filter: { frontmatter: { modulo: { regex: "/pythonPost/" } } }
         sort: { fields: frontmatter___title, order: ASC }
       ) {
         edges {
@@ -28,14 +27,12 @@ const AlgoritmiaPage = () => {
     <ContainerCode>
       <ImageCN />
       <CodeNotesWrapper>
-        <H2CN>Básico</H2CN>
+        <H2CN>Python posts</H2CN>
         <Ul>
-          {data2.allMdx.edges.map(edge => {
+          {dataPython.allMdx.edges.map(edge => {
             return (
               <Li4>
-                <Link
-                  to={`/codenotes/senati/algoritmia/${edge.node.frontmatter.slug}`}
-                >
+                <Link to={`/codenotes/python/${edge.node.frontmatter.slug}`}>
                   <h3>{edge.node.frontmatter.title}</h3>
                   <p>{edge.node.frontmatter.date}</p>
                 </Link>
@@ -47,4 +44,4 @@ const AlgoritmiaPage = () => {
     </ContainerCode>
   )
 }
-export default AlgoritmiaPage
+export default PythonPage

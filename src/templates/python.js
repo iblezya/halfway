@@ -4,7 +4,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { ContainerCode, ImageCN, Post } from "../components"
 // import { H2CN } from "../style"
 
-const SenatiPost = ({ data }) => {
+const PythonPost = ({ data }) => {
   // const featureImage = data.mdx.frontmatter.featureImage.childImageSharp.fluid
   return (
     <ContainerCode>
@@ -19,7 +19,7 @@ const SenatiPost = ({ data }) => {
   )
 }
 export const pageQuery = graphql`
-  query SenaSinglePostQuery($id: String!) {
+  query PythonSinglePostQuery($id: String!) {
     mdx(id: { eq: $id }) {
       body
       frontmatter {
@@ -28,7 +28,6 @@ export const pageQuery = graphql`
         modulo
         slug
         title
-        ruta
         featureImage {
           childImageSharp {
             fluid(maxWidth: 1920, quality: 100) {
@@ -40,4 +39,4 @@ export const pageQuery = graphql`
     }
   }
 `
-export default SenatiPost
+export default PythonPost

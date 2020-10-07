@@ -15,10 +15,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const fundaTemplate = require.resolve("./src/templates/fundamentos.js")
-  const javascriptTemplate = require.resolve("./src/templates/javascript.js")
+  // const fundaTemplate = require.resolve("./src/templates/fundamentos.js")
+  // const javascriptTemplate = require.resolve("./src/templates/javascript.js")
   const inglesTemplate = require.resolve("./src/templates/ingles.js")
-  const senatiTemplate = require.resolve(`./src/templates/senati.js`)
+  const pythonTemplate = require.resolve(`./src/templates/python.js`)
   const { data } = await graphql(`
     query {
       allMdx(filter: { frontmatter: { post: { regex: "/post/" } } }) {
@@ -43,22 +43,16 @@ exports.createPages = async ({ graphql, actions }) => {
 
   data.allMdx.edges.forEach(edge => {
     const id = edge.node.id
-    if (edge.node.fields.sourceName === "funda") {
+    if (edge.node.fields.sourceName === "python") {
       createPage({
-        component: fundaTemplate,
-        path: `/codenotes/fundamentos/pensamientologico/${edge.node.frontmatter.slug}`,
+        component: pythonTemplate,
+        path: `/codenotes/python/${edge.node.frontmatter.slug}`,
         context: { id },
       })
     } else if (edge.node.fields.sourceName === "ingles") {
       createPage({
         component: inglesTemplate,
         path: `/codenotes/ingles/${edge.node.frontmatter.modulo}/${edge.node.frontmatter.slug}`,
-        context: { id },
-      })
-    } else if (edge.node.fields.sourceName === "senati") {
-      createPage({
-        component: senatiTemplate,
-        path: `/codenotes/senati/${edge.node.frontmatter.modulo}/${edge.node.frontmatter.slug}`,
         context: { id },
       })
     }

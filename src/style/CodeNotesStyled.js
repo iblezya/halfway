@@ -4,7 +4,7 @@ export const CodeNotesWrapper = styled.div`
   * {
     text-decoration: none;
   }
-  border-radius: 10px 10px 0 0;
+  border-radius: 25px 25px 0 0;
   grid-column: 3 / span 10;
   grid-row: 3/5;
   width: 100%;
@@ -14,7 +14,7 @@ export const CodeNotesWrapper = styled.div`
   align-content: center;
   flex-direction: column;
   background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
-  opacity: 0.88;
+  opacity: 0.98;
   padding: ${props =>
     `${props.theme.spacings.xLarge} ${props.theme.spacings.xxLarge}`};
   box-shadow: ${props => props.theme.shadows.shadow1};
@@ -82,14 +82,14 @@ export const PCN = styled.p`
 export const Ul = styled.ul`
   list-style: none;
   & a {
-    font-size: 2em;
+    font-size: 1.75em;
     background: #212529;
     color: ${props => props.theme.colors.codenotes};
     display: block;
     padding: 1rem;
     text-decoration: none;
     border: none;
-    border-radius: 2em;
+    border-radius: 0.75em;
     position: relative;
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
       0 0 40px rgba(0, 0, 0, 0.1) inset;

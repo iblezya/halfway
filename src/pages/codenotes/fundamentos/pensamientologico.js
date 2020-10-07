@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 
 import { ContainerCode, ImageCN } from "../../../components"
-import { CodeNotesWrapper, Cursos, Ul, Li5, H2CN } from "../../../style"
+import { CodeNotesWrapper, Ul, H2CN } from "../../../style"
 
 const PensamientoLogicoPage = () => {
   const data = useStaticQuery(graphql`

@@ -29,7 +29,7 @@ const CodeNotes = () => {
           <H3CN>Code Notes</H3CN>
           <Ul>
             <Li5>
-              <Link to="/codenotes/fundamentos">Fundamentor$$$</Link>
+              <Link to="/codenotes/python">Python</Link>
             </Li5>
             <Li2>
               <Link to="#">Javascript</Link>

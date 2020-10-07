@@ -49,8 +49,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "senati",
-        path: `${__dirname}/content/senati`,
+        name: "python",
+        path: `${__dirname}/content/python`,
       },
     },
     {

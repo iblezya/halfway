@@ -35,6 +35,10 @@ export const PostWrapper = styled.div`
     color: ${props => props.theme.colors.codenotes};
     font-size: 1.125em;
   }
+  code {
+    color: ${props => props.theme.colors.codenotes};
+    background: gray;
+  }
   h1 {
     font-size: 2.25em;
   }
