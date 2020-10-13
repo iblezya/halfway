@@ -6,12 +6,10 @@ import {
   DivText,
   Cursos,
   Ul,
-  Li,
   H2CN,
   H3CN,
   PCN,
   Li2,
-  Li3,
   Li4,
   Li5,
 } from "../style"
@@ -34,18 +32,9 @@ const CodeNotes = () => {
             <Li2>
               <Link to="#">Javascript</Link>
             </Li2>
-            <Li3>
-              <Link to="#">Desarrollo Web</Link>
-            </Li3>
             <Li4>
               <Link to="#">Git/Github</Link>
             </Li4>
-            <Li>
-              <Link to="/codenotes/ingles">Ingles</Link>
-            </Li>
-            <Li>
-              <Link to="#">Desarrollo Profesional</Link>
-            </Li>
           </Ul>
         </Cursos>
       </CodeNotesWrapper>

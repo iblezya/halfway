@@ -11,7 +11,6 @@ const PythonPost = ({ data }) => {
       <ImageCN />
       <Post>
         <article>
-          <h1>{data.mdx.frontmatter.title}</h1>
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </article>
       </Post>

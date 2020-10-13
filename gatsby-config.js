@@ -80,6 +80,13 @@ module.exports = {
               quality: 100,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_blank",
+              rel: "nofollow"
+            },
+          },
         ],
       },
     },
